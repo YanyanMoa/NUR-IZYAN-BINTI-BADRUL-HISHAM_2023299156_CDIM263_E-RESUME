@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/831ef9f97e.js" crossorigin="anonymous"></script>
+    <title>Resume - Nur Izyan</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for alignment */
+        .education-item {
+            display: flex;
+            align-items: center; /* Align items to the center */
+            margin-bottom: 10px; /* Space between items */
+            padding: 10px; /* Padding for better spacing */
+            border: 1px solid #d6e9f7; /* Optional border for clarity */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #f5faff; /* Background color for better readability */
+        }
+        .education-item h4, .education-item p {
+            margin: 0;
+            flex: 1;
+        }
+        .education-item .button-container {
+            display: flex;
+            justify-content: flex-end; /* Align buttons to the right */
+            flex: 1;
+        }
+        .education-item button {
+            background-color: #0d2a83;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 10px; /* Space between text and button */
+        }
+        .education-item button:hover {
+            background-color: #006bbf;
+        }
+        .download-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .download-section a {
+            text-decoration: none;
+            color: white;
+            background-color: #0d2a83;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin: 5px;
+        }
+        .download-section a:hover {
+            background-color: #006bbf;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="student.html">
+            <i class="fa-solid fa-headset fa-bounce fa-2xl" style="color: #96b4e8;"></i> 
+            </a>
+        </div>
+        <h1>Resume</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="reference.html">Reference</a>
+        </nav>
+    </header>
+    <div class="content">
+        <main>
+            <h2>Education Background</h2>
+            <ul>
+                <li>
+                    <h3>Secondary School:</h3>
+                    <p>Sekolah Menengah Kebangsaan Dang Anum</p>
+                </li>
+                <li class="education-item">
+                    <h4>SPM Results:</h4>
+                    <div class="button-container">
+                        <button>View Results</button>
+                    </div>
+                    <p style="display: none;">SPM: 8A</p>
+                </li>
+                <li>
+                    <h3>Higher Education:</h3>
+                </li>
+                <div class="education-item">
+                    <h4>1. UITM Dengkil, Asasi Undang-undang</h4>
+                    <div class="button-container">
+                        <button>View Results</button>
+                    </div>
+                    <p style="display: none;">CGPA: 3.67 (UPU)</p>
+                </div>
+                <div class="education-item">
+                    <h4>2. UITM Puncak Perdana, Ijazah Sains Maklumat (Kepujian) Pengurusan Kandungan Maklumat</h4>
+                    <div class="button-container">
+                        <button>View Results</button>
+                    </div>
+                    <p style="display: none;">Sem 1: CGPA: 3.4</p>
+                </div>
+            </ul>
+            <div class="download-section">
+                <a href="Results_dw/Izyan_SPMResult.pdf" download="results.dw">&#128229; SPM Results</a>
+                <a href="Results_dw/FOUNDATION_Result.pdf" download="results.dw">&#128229; Foundation Results</a>
+                <a href="Results_dw/SEM1_DegreeResult.pdf" download="results.dw">&#128229; Degree Results</a>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nur Izyan. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttons = document.querySelectorAll(".education-item button");
+            buttons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const result = this.closest('.education-item').querySelector('p');
+                    if (result.style.display === "none" || result.style.display === "") {
+                        result.style.display = "block";
+                        this.textContent = "Hide Results";
+                    } else {
+                        result.style.display = "none";
+                        this.textContent = "View Results";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
