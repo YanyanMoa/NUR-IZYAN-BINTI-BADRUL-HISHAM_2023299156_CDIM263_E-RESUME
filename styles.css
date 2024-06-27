@@ -28,9 +28,7 @@ main {
 }
 
 .logo {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 20px; /* Adjust margin as needed */
 }
 
 header, nav, footer {
@@ -42,18 +40,23 @@ header, nav, footer {
 
 nav {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 nav a {
     color: rgb(255, 255, 255);
-    margin: 0 15px;
+    margin-left: 10px; /* Adjust the margin as needed */
     text-decoration: none;
 }
 
 nav a:hover {
     text-decoration: underline;
+}
+
+/* Optional: Adjust the logo size if needed */
+nav .logo img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
 }
 
 .hero {
@@ -308,3 +311,4 @@ input[type="submit"]:hover {
         padding: 1em;
     }
 }
+
