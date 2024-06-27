@@ -27,19 +27,12 @@ main {
     overflow-y: auto; /* Enable vertical scrolling if needed */
 }
 
-.logo {
-    position: absolute;
-    top: 0;
-    left: 60px;
-    padding: 50px; /* Adjust padding as needed */
-    font-size: 30px;
-}
-
 header, nav, footer {
     background-color: #4D869C;
     color: white;
     text-align: center;
     padding: 1em 0;
+    position: relative; /* Add this */
 }
 
 nav a {
@@ -50,6 +43,14 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* Adjust this as needed */
+    transform: translateY(-50%);
+    font-size: 30px;
 }
 
 .hero {
@@ -196,6 +197,7 @@ h1, h2, h3, h4 {
     width: 40px;
     height: 40px;
 }
+
 /* Add this CSS to your existing styles */
 .icon-spacing {
     margin-right: 10px; /* Adjust the spacing as needed */
@@ -308,3 +310,4 @@ input[type="submit"]:hover {
         padding: 1em;
     }
 }
+
