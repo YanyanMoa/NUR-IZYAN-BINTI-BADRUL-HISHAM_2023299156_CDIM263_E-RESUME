@@ -27,12 +27,36 @@ main {
     overflow-y: auto; /* Enable vertical scrolling if needed */
 }
 
-header, nav, footer {
+header {
     background-color: #4D869C;
     color: white;
-    text-align: center;
     padding: 1em 0;
-    position: relative; /* Add this */
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-height: 100px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    flex: 1;
+    text-align: center;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
 }
 
 nav a {
@@ -43,14 +67,6 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}
-
-.logo {
-    position: absolute;
-    top: 50%;
-    left: 20px; /* Adjust this as needed */
-    transform: translateY(-50%);
-    font-size: 30px;
 }
 
 .hero {
@@ -296,6 +312,15 @@ input[type="submit"]:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
     .content {
         padding: 1em;
         margin: 1em;
@@ -310,4 +335,5 @@ input[type="submit"]:hover {
         padding: 1em;
     }
 }
+
 
