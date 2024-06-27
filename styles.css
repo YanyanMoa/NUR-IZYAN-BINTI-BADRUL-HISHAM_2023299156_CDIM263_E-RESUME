@@ -29,9 +29,9 @@ main {
 
 .logo {
     position: absolute;
-    top: 0;
+    top: -70px;
     left: 60px;
-    padding: 50px; /* Adjust padding as needed */
+    padding: 2px; /* Adjust padding as needed */
     font-size: 30px;
 }
 
