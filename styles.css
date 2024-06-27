@@ -28,8 +28,13 @@ main {
 }
 
 .logo {
-    margin-right: 20px; /* Adjust margin as needed */
+    position: absolute;
+    top: 0;
+    left: 60px;
+    padding: 50px; /* Adjust padding as needed */
+    font-size: 30px;
 }
+
 
 header, nav, footer {
     background-color: #4D869C;
@@ -38,25 +43,14 @@ header, nav, footer {
     padding: 1em 0;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-}
-
 nav a {
     color: rgb(255, 255, 255);
-    margin-left: 10px; /* Adjust the margin as needed */
+    margin: 0 15px;
     text-decoration: none;
 }
 
 nav a:hover {
     text-decoration: underline;
-}
-
-/* Optional: Adjust the logo size if needed */
-nav .logo img {
-    width: 50px; /* Adjust the size as needed */
-    height: auto;
 }
 
 .hero {
@@ -310,5 +304,4 @@ input[type="submit"]:hover {
     form {
         padding: 1em;
     }
-}
-
+}                   
