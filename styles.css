@@ -30,8 +30,8 @@ main {
 .logo {
     position: absolute;
     top: 0;
-    left: 20px;
-    padding: 10px; /* Adjust padding as needed */
+    left: 60px;
+    padding: 50px; /* Adjust padding as needed */
     font-size: 30px;
 }
 
